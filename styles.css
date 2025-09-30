@@ -72,12 +72,6 @@ p  { font-size: 14px; line-height: 1.5; }
     flex-direction: column; /* ссылки одна под другой */
     width: 100%;
   }
-
-  .nav-links a {
-    display: block;
-    width: 100%; /* растянуть на всю ширину */
-    background: #222;
-    margin: 2px 0;
   }
 }
 
@@ -120,4 +114,5 @@ p  { font-size: 14px; line-height: 1.5; }
     grid-template-columns: repeat(3, 1fr); /* три бокса в ряд */
   }
 }
+
 
