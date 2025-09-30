@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fbfbfd;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#357ab7, #7ca8ce);
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px #666f76;
+}
+
+.typo {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px; /* расстояние между ссылками */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background: #3f6d96;
+}
+
+/* Default (mobile-first) typography */
+.typo { font-size: 22px; }
+.nav-links { font-size: 12px; }
+h2 { font-size: 18px; margin-bottom: 8px; }
+p  { font-size: 14px; line-height: 1.5; }
+
+/* Tablet */
+@media (min-width: 600px) {
+  .nav-links { font-size: 14px; }
+  .typo { font-size: 28px; }
+  h2 { font-size: 20px; }
+  p  { font-size: 15px; }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .nav-links { font-size: 18px; }
+  .typo { font-size: 36px; }
+  h2 { font-size: 24px; }
+  p  { font-size: 16px; }
+}
+
+/* Моб делаем меню в столбик */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* лого сверху, меню ниже */
+    align-items: flex-start; /* выравниваем влево */
+  }
+
+  .nav-links {
+    flex-direction: column; /* ссылки одна под другой */
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%; /* растянуть на всю ширину */
+    background: #222;
+    margin: 2px 0;
+  }
+}
+
+
+/* Task 1 */
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr; /* мобилка: один бокс в ряд */
+  gap: 20px;                  /* расстояние между боксами */
+  max-width: 1000px;          /* ограничение ширины на больших экранах */
+  margin: 0 auto;             /* центрируем */
+  padding: 10px;              /* отступы от краёв экрана */
+}
+
+.box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 6px #222;
+  text-align: center;
+  transition: transform 0.3s, background 0.5s;
+}
+
+.box:hover {
+  transform: scale(1.03);
+  background: #e6e6e6;
+}
+
+/* Планшет */
+@media (min-width: 600px) {
+  .boxes {
+    grid-template-columns: 1fr 1fr; /* два бокса в ряд */
+  }
+}
+
+/* Десктоп */
+@media (min-width: 992px) {
+  .boxes {
+    grid-template-columns: repeat(3, 1fr); /* три бокса в ряд */
+  }
+}
+
